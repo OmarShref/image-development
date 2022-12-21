@@ -1,8 +1,10 @@
 import "./AboutCompany.css";
-import aboutCompany1 from "../../assets/about-company-1.jpeg";
+import { useSelector } from "react-redux";
 import logo from "../../assets/logo.png";
 
 const AboutCompany = () => {
+  const { projects, currentIndex } = useSelector((state) => state.projects);
+
   return (
     <div
       id="about-company"
@@ -15,7 +17,7 @@ const AboutCompany = () => {
       <div className="cards-container">
         <div
           className="card"
-          style={{ backgroundImage: `url(${aboutCompany1})` }}
+          style={{ backgroundImage: `url(${projects[currentIndex].image})` }}
         ></div>
         <div className="card text">
           <h2>ما تقدمه الشركة</h2>
@@ -43,7 +45,7 @@ const AboutCompany = () => {
         </div>
         <div
           className="card third"
-          style={{ backgroundImage: `url(${aboutCompany1})` }}
+          style={{ backgroundImage: `url(${projects[currentIndex].image})` }}
         ></div>
       </div>
     </div>
