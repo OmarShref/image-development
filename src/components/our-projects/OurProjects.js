@@ -24,11 +24,12 @@ const OurProjects = () => {
     ).style.left = `calc(-100vw * ${newIndex})`;
   };
 
-  // function resizeListener() {
-  //   dispatch(setCurrentIndex(0));
-  //   document.getElementById("projects-container").style.left = `0`;
-  // }
-  // window.addEventListener("resize", resizeListener);
+  function resizeListener() {
+    document.getElementById(
+      "projects-container"
+    ).style.left = `calc(-100vw * ${currentIndex})`;
+  }
+  window.addEventListener("resize", resizeListener);
 
   return (
     <div id="our-projects" className="our-projects">
