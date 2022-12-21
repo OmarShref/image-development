@@ -33,45 +33,44 @@ const Navbar = () => {
   let scrollPos = 0;
   function scrollListener() {
     if (document.body.getBoundingClientRect().top > scrollPos) {
-      document
-        .getElementsByClassName("navbar")[0]
-        .classList.remove("scrolled-up");
+      document.getElementById("navbar").classList.remove("scrolled-up");
     } else {
-      document.getElementsByClassName("navbar")[0].classList.add("scrolled-up");
+      document.getElementById("navbar").classList.add("scrolled-up");
     }
     scrollPos = document.body.getBoundingClientRect().top;
 
     // ------------------------------------------------------------------------
-    // for (const link of [...document.getElementsByTagName("a")]) {
-    //   link.classList.remove("current-link");
-    // }
-    // if (window.scrollY < window.innerHeight) {
-    //   [...document.getElementsByTagName("a")][0].classList.add("current-link");
-    //   [...document.getElementsByTagName("a")][4].classList.add("current-link");
-    // } else if (
-    //   window.scrollY >= window.innerHeight &&
-    //   window.scrollY < 2 * window.innerHeight
-    // ) {
-    //   [...document.getElementsByTagName("a")][1].classList.add("current-link");
-    //   [...document.getElementsByTagName("a")][5].classList.add("current-link");
-    // } else if (
-    //   window.scrollY >= 2 * window.innerHeight &&
-    //   window.scrollY < 3 * window.innerHeight
-    // ) {
-    //   [...document.getElementsByTagName("a")][2].classList.add("current-link");
-    //   [...document.getElementsByTagName("a")][6].classList.add("current-link");
-    // } else if (
-    //   window.scrollY >= 3 * window.innerHeight &&
-    //   window.scrollY < 4 * window.innerHeight
-    // ) {
-    //   [...document.getElementsByTagName("a")][3].classList.add("current-link");
-    //   [...document.getElementsByTagName("a")][7].classList.add("current-link");
-    // }
+
+    document.getElementById("1").classList.remove("current-link");
+    document.getElementById("2").classList.remove("current-link");
+    document.getElementById("3").classList.remove("current-link");
+    // document.getElementById("4").classList.remove("current-link");
+    document.getElementById("5").classList.remove("current-link");
+    document.getElementById("6").classList.remove("current-link");
+    document.getElementById("7").classList.remove("current-link");
+    // document.getElementById("8").classList.remove("current-link");
+    const aboutCompanyHeight = window.innerWidth <= 850 ? 1909 : 1069;
+    if (window.scrollY < window.innerHeight) {
+      document.getElementById("1").classList.add("current-link");
+      document.getElementById("5").classList.add("current-link");
+    } else if (
+      window.scrollY >= window.innerHeight &&
+      window.scrollY < window.innerHeight + aboutCompanyHeight
+    ) {
+      document.getElementById("2").classList.add("current-link");
+      document.getElementById("6").classList.add("current-link");
+    } else if (
+      window.scrollY >= window.innerHeight + aboutCompanyHeight &&
+      window.scrollY < 2 * window.innerHeight + aboutCompanyHeight
+    ) {
+      document.getElementById("3").classList.add("current-link");
+      document.getElementById("7").classList.add("current-link");
+    }
   }
   window.addEventListener("scroll", scrollListener);
 
   return (
-    <div className="navbar">
+    <div className="navbar" id="navbar">
       <div className="navbar-contents">
         <div className="navbar-background"></div>
         <div>
@@ -79,22 +78,27 @@ const Navbar = () => {
         </div>
         <ul className="dropdown-menu">
           <li>
-            <a onClick={handleClose} href="#landing">
+            <a
+              id="1"
+              onClick={handleClose}
+              href="#landing"
+              className="current-link"
+            >
               الصفحة الرئيسية
             </a>
           </li>
           <li>
-            <a onClick={handleClose} href="#about-company">
+            <a id="2" onClick={handleClose} href="#about-company">
               حول الشركة
             </a>
           </li>
           <li>
-            <a onClick={handleClose} href="">
+            <a id="3" onClick={handleClose} href="#our-projects">
               المشاريع
             </a>
           </li>
           <li>
-            <a onClick={handleClose} href="">
+            <a id="4" onClick={handleClose} href="">
               اتصل بنا
             </a>
           </li>
@@ -102,22 +106,27 @@ const Navbar = () => {
         <div className="nav-links">
           <ul>
             <li>
-              <a onClick={handleClose} href="#landing">
+              <a
+                id="5"
+                onClick={handleClose}
+                href="#landing"
+                className="current-link"
+              >
                 الصفحة الرئيسية
               </a>
             </li>
             <li>
-              <a onClick={handleClose} href="#about-company">
+              <a id="6" onClick={handleClose} href="#about-company">
                 حول الشركة
               </a>
             </li>
             <li>
-              <a onClick={handleClose} href="">
+              <a id="7" onClick={handleClose} href="#our-projects">
                 المشاريع
               </a>
             </li>
             <li>
-              <a onClick={handleClose} href="">
+              <a id="8" onClick={handleClose} href="">
                 اتصل بنا
               </a>
             </li>

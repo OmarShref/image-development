@@ -7,7 +7,7 @@ beg : #cfaf5c */
   position: fixed;
   width: 100%;
   z-index: 100;
-  transition: 0.4s ease;
+  transition: 0.5s ease;
 }
 .scrolled-up {
   transform: translateY(-100%);

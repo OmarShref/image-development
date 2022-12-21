@@ -46,7 +46,8 @@ beg : #cfaf5c */
   height: 400px;
   background-size: cover;
   background-attachment: fixed;
-  background-position: center;
+  background-position: fixed;
+  background-repeat: no-repeat;
   text-align: center;
   color: #23326b;
   margin-top: 20px;
