@@ -37,7 +37,7 @@ beg : #cfaf5c */
 ul {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .dropdown-menu {
   width: 100%;
@@ -94,13 +94,13 @@ ul li a:hover {
   font-size: 30px;
   color: #23326b;
   transition: 0.3s ease;
+  cursor: pointer;
 }
 .flipped {
   transform: rotate(90deg);
   color: #cfaf5c;
 }
 .menu-icon:hover {
-  cursor: pointer;
   color: #cfaf5c;
 }
 

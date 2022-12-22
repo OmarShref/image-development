@@ -19,8 +19,11 @@ beg : #cfaf5c */
   backdrop-filter: blur(5px);
   padding: 5px 10px;
   border-radius: 4px;
-  transition: 0.2s ease;
+  transition: 0.15s ease;
+  user-select: none;
+  cursor: pointer;
 }
+
 .our-projects i:hover {
   color: #cfaf5c;
   /* font-size: 55px; */
@@ -84,6 +87,12 @@ beg : #cfaf5c */
   .our-projects i {
     font-size: 30px;
   }
+  .our-projects i:hover {
+    color: #23326b;
+  }
+  .our-projects i:active {
+    color: #cfaf5c;
+  }
   .left-arrow {
     left: 20px;
   }
@@ -93,10 +102,7 @@ beg : #cfaf5c */
   .projects-container {
     transition: 0.6s ease;
   }
-  /* .project {
-    background-size: contain;
-    background-position: center;
-  } */
+
   .project .project-card {
     position: absolute;
     bottom: 60px;
@@ -116,6 +122,12 @@ beg : #cfaf5c */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 601px) and (max-width: 850px) {
+  .our-projects i:hover {
+    color: #23326b;
+  }
+  .our-projects i:active {
+    color: #cfaf5c;
+  }
   .project .project-card p {
     font-size: 24px;
   }
