@@ -29,11 +29,23 @@ beg : #cfaf5c */
   backdrop-filter: blur(7px);
   z-index: -1;
 }
-.logo {
+.logo-language-container {
+  display: flex;
+  align-items: center;
+}
+.logo-language-container .logo {
   width: 150px;
   cursor: pointer;
 }
-
+.logo-language-container .language-btn {
+  font-size: 32px;
+  color: #23326b;
+  padding: 0 30px;
+  cursor: pointer;
+}
+.logo-language-container .language-btn.is-english {
+  color: #cfaf5c;
+}
 ul {
   display: flex;
   align-items: center;
@@ -47,7 +59,7 @@ ul {
   justify-content: space-between;
   position: absolute;
   background-color: rgba(250, 250, 250, 0.85);
-  top: 62.95px;
+  top: 60.45px;
   left: 0;
   border-bottom: 4px solid #23326b;
   transition: 0.4s ease;
@@ -109,8 +121,12 @@ ul li a:hover {
   .navbar-contents {
     padding: 0 30px;
   }
-  .logo {
+  .logo-language-container .logo {
     width: 120px;
+  }
+  .logo-language-container .language-btn {
+    font-size: 26px;
+    padding: 0 20px;
   }
   .menu-icon {
     display: block !important;
@@ -120,7 +136,7 @@ ul li a:hover {
     display: none;
   }
   .dropdown-menu {
-    top: 51.97px;
+    top: 48.97px;
   }
 }
 
@@ -135,7 +151,17 @@ ul li a:hover {
 }
 
 /* Medium devices (landscape tablets, 800px and up) */
-@media only screen and (max-width: 851px) {
+@media only screen and (min-width: 852px) and (max-width: 991px) {
+  .logo-language-container .language-btn {
+    font-size: 28px;
+    padding: 0 18px;
+  }
+  .logo-language-container .logo {
+    width: 135px;
+  }
+  ul li a {
+    padding: 20px 0 20px 35px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */

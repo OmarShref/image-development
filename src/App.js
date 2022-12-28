@@ -7,7 +7,7 @@ import ContactUs from "./components/contact-us/ContactUs";
 
 function App() {
   return (
-    <div className="main-app">
+    <div id="main-app" className="main-app">
       <Navbar />
       <Landing />
       <AboutCompany />

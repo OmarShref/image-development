@@ -1,8 +1,18 @@
 import "./Landing.css";
 import landingVideo from "../../assets/landing-video.mp4";
 import logo from "../../assets/logo.png";
+import { useSelector } from "react-redux";
 
 const Landing = () => {
+  const text = {
+    cardText: [
+      "One of the Nile Delta companies",
+      "إحدى شركات دلتا النيل للمقاولات",
+    ],
+  };
+
+  const { isEnglish } = useSelector((state) => state.language);
+
   const mousemoveListener = (e) => {
     if (window.innerWidth > 600) {
       document.body.style.setProperty(
@@ -27,7 +37,7 @@ const Landing = () => {
       ></video>
       <div className="landing-card">
         <img src={logo} alt="company logo" />
-        <p>إحدى شركات دلتا النيل للمقاولات</p>
+        <p>{isEnglish ? text.cardText[0] : text.cardText[1]}</p>
       </div>
     </div>
   );

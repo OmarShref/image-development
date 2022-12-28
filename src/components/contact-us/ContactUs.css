@@ -6,6 +6,18 @@ beg : #cfaf5c */
   overflow: hidden;
   z-index: 1;
 }
+.contactus::before {
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border: 3px solid #23326b;
+  background-color: red;
+  position: absolute;
+  z-index: -1;
+}
 .contactus .pointer-div {
   position: absolute;
   background-color: rgba(35, 50, 107, 0.4);
@@ -45,20 +57,6 @@ beg : #cfaf5c */
   background-color: rgba(250, 250, 250, 0.7);
   backdrop-filter: blur(5px);
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.contactus .contents::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
-  border: 3px solid #23326b;
-  z-index: -1;
-  background-color: red;
 }
 
 .contactus .contents p {

@@ -18,7 +18,7 @@ const ContactUs = () => {
   document.addEventListener("mousemove", (e) => pointerDivMove(e));
 
   return (
-    <div className="contactus">
+    <div id="contactus" className="contactus">
       <div id="pointer-div" className="pointer-div"></div>
       <div className="section-title">
         <p>اتصل بنا</p>

@@ -1,9 +1,24 @@
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { changeLanguage } from "../../redux/languageReducer";
 
 const Navbar = () => {
+  const texts = {
+    home: ["Home", "الصفحة الرئيسية"],
+    aboutCompany: ["About Company", "حول الشركة"],
+    projects: ["Projects", "المشاريع"],
+    contactUs: ["Contact Us", "اتصل بنا"],
+  };
+
   const [showLinks, setShowLinks] = useState(true);
+  const { isEnglish } = useSelector((state) => state.language);
+  const dispatch = useDispatch();
+
+  const handleLanguageChange = () => {
+    dispatch(changeLanguage(!isEnglish));
+  };
   const handleOpen = () => {
     setShowLinks(false);
     document.getElementsByClassName("dropdown-menu")[0].classList.add("opened");
@@ -44,11 +59,11 @@ const Navbar = () => {
     document.getElementById("1").classList.remove("current-link");
     document.getElementById("2").classList.remove("current-link");
     document.getElementById("3").classList.remove("current-link");
-    // document.getElementById("4").classList.remove("current-link");
+    document.getElementById("4").classList.remove("current-link");
     document.getElementById("5").classList.remove("current-link");
     document.getElementById("6").classList.remove("current-link");
     document.getElementById("7").classList.remove("current-link");
-    // document.getElementById("8").classList.remove("current-link");
+    document.getElementById("8").classList.remove("current-link");
     const aboutCompanyHeight = window.innerWidth <= 850 ? 1909 : 1069;
     if (window.scrollY < window.innerHeight) {
       document.getElementById("1").classList.add("current-link");
@@ -65,6 +80,12 @@ const Navbar = () => {
     ) {
       document.getElementById("3").classList.add("current-link");
       document.getElementById("7").classList.add("current-link");
+    } else if (
+      window.scrollY >= 2 * window.innerHeight + aboutCompanyHeight &&
+      window.scrollY < 2 * window.innerHeight + aboutCompanyHeight + 465
+    ) {
+      document.getElementById("3").classList.add("current-link");
+      document.getElementById("7").classList.add("current-link");
     }
   }
   window.addEventListener("scroll", scrollListener);
@@ -73,8 +94,19 @@ const Navbar = () => {
     <div className="navbar" id="navbar">
       <div className="navbar-contents">
         <div className="navbar-background"></div>
-        <div>
+        <div className="logo-language-container">
           <img className="logo" src={logo} alt="Company logo" />
+          {isEnglish ? (
+            <i
+              onClick={handleLanguageChange}
+              className="fa-solid fa-language language-btn is-english"
+            ></i>
+          ) : (
+            <i
+              onClick={handleLanguageChange}
+              className="fa-solid fa-language language-btn"
+            ></i>
+          )}
         </div>
         <ul className="dropdown-menu">
           <li>
@@ -84,22 +116,22 @@ const Navbar = () => {
               href="#landing"
               className="current-link"
             >
-              الصفحة الرئيسية
+              {isEnglish ? texts.home[0] : texts.home[1]}
             </a>
           </li>
           <li>
             <a id="2" onClick={handleClose} href="#about-company">
-              حول الشركة
+              {isEnglish ? texts.aboutCompany[0] : texts.aboutCompany[1]}
             </a>
           </li>
           <li>
             <a id="3" onClick={handleClose} href="#our-projects">
-              المشاريع
+              {isEnglish ? texts.projects[0] : texts.projects[1]}
             </a>
           </li>
           <li>
-            <a id="4" onClick={handleClose} href="">
-              اتصل بنا
+            <a id="4" onClick={handleClose} href="#contactus">
+              {isEnglish ? texts.contactUs[0] : texts.contactUs[1]}
             </a>
           </li>
         </ul>
@@ -112,22 +144,22 @@ const Navbar = () => {
                 href="#landing"
                 className="current-link"
               >
-                الصفحة الرئيسية
+                {isEnglish ? texts.home[0] : texts.home[1]}
               </a>
             </li>
             <li>
               <a id="6" onClick={handleClose} href="#about-company">
-                حول الشركة
+                {isEnglish ? texts.aboutCompany[0] : texts.aboutCompany[1]}
               </a>
             </li>
             <li>
               <a id="7" onClick={handleClose} href="#our-projects">
-                المشاريع
+                {isEnglish ? texts.projects[0] : texts.projects[1]}
               </a>
             </li>
             <li>
-              <a id="8" onClick={handleClose} href="">
-                اتصل بنا
+              <a id="8" onClick={handleClose} href="#contactus">
+                {isEnglish ? texts.contactUs[0] : texts.contactUs[1]}
               </a>
             </li>
           </ul>

@@ -3,7 +3,14 @@ import { useSelector } from "react-redux";
 import logo from "../../assets/logo.png";
 
 const AboutCompany = () => {
+  const text = {
+    aboutCompany: ["About Company", "حول الشركة"],
+    whatCompanyOffers: ["What Company Offers", "ما تقدمه الشركة"],
+    boardOfDirectors: ["Board of Directors", "أعضاء مجلس الإدارة"],
+  };
+
   const { projects, currentIndex } = useSelector((state) => state.projects);
+  const { isEnglish } = useSelector((state) => state.language);
 
   return (
     <div
@@ -12,7 +19,7 @@ const AboutCompany = () => {
       style={{ backgroundImage: `url(${logo})` }}
     >
       <div className="section-title">
-        <p>حول الشركة</p>
+        <p>{isEnglish ? text.aboutCompany[0] : text.aboutCompany[1]}</p>
       </div>
       <div className="cards-container">
         <div
@@ -20,7 +27,9 @@ const AboutCompany = () => {
           style={{ backgroundImage: `url(${projects[currentIndex].image})` }}
         ></div>
         <div className="card text">
-          <h2>ما تقدمه الشركة</h2>
+          <h2>
+            {isEnglish ? text.whatCompanyOffers[0] : text.whatCompanyOffers[1]}
+          </h2>
           <div>
             <p>
               <span>التطوير العقاري</span> هو ما تقدمه الشركة بوضع الرؤية
@@ -31,7 +40,9 @@ const AboutCompany = () => {
           </div>
         </div>
         <div className="card fourth text">
-          <h2>أعضاء مجلس الإدارة</h2>
+          <h2>
+            {isEnglish ? text.boardOfDirectors[0] : text.boardOfDirectors[1]}
+          </h2>
           <div>
             <p>
               هي شركة مساهمة مصرية يرئسها <span>م / حسن عبدالوهاب</span> والعضو
