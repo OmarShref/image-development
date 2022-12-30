@@ -67,21 +67,23 @@ beg : #cfaf5c */
 
 .card h2 {
   border-bottom: 4px solid #cfaf5c;
-  padding: 20px 0;
+  padding: 10px 0;
   font-size: 28px;
   font-weight: 400;
+  line-height: 31px;
 }
 .card div {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   height: 100%;
-  text-align: end;
+  text-align: var(--text-align);
 }
 .card p {
   font-size: 24px;
   padding: 40px 20px;
   font-weight: 300;
+  line-height: 27px;
 }
 .card span {
   font-size: 28px;
@@ -103,9 +105,17 @@ beg : #cfaf5c */
   .card.fourth {
     order: 4;
   }
+  .card h2 {
+    border-bottom: 4px solid #cfaf5c;
+    padding: 20px 0;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 8px;
+  }
   .card p {
     padding: 20px 20px;
     font-size: 18px;
+    line-height: 20px;
   }
   .card span {
     font-size: 20px;
@@ -130,6 +140,7 @@ beg : #cfaf5c */
   .card p {
     padding: 20px 20px;
     font-size: 22px;
+    line-height: 25px;
   }
   .card span {
     font-size: 24px;

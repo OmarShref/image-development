@@ -95,7 +95,9 @@ const Navbar = () => {
       <div className="navbar-contents">
         <div className="navbar-background"></div>
         <div className="logo-language-container">
-          <img className="logo" src={logo} alt="Company logo" />
+          <a href="#landing" style={{ display: "flex", alignItems: "center" }}>
+            <img className="logo" src={logo} alt="Company logo" />
+          </a>
           {isEnglish ? (
             <i
               onClick={handleLanguageChange}
