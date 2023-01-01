@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer_contents">
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-facebook-f"></i>
-        <i class="fa-brands fa-twitter"></i>
+        <i className="fa-brands fa-instagram"></i>
+        <i className="fa-brands fa-facebook-f"></i>
+        <i className="fa-brands fa-twitter"></i>
       </div>
     </div>
   );

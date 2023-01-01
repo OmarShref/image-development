@@ -26,9 +26,15 @@ const ContactUs = () => {
         <p>{isEnglish ? text.contactUs[0] : text.contactUs[1]}</p>
       </div>
       <div className="contents">
-        <p>{isEnglish ? text.phone[0] : text.phone[1]}</p>
-        <p>{isEnglish ? text.email[0] : text.email[1]}</p>
-        <p>{isEnglish ? text.adress[0] : text.adress[1]}</p>
+        <a href="tel:19087">
+          <p>{isEnglish ? text.phone[0] : text.phone[1]}</p>
+        </a>
+        <a href="mailto:info@imageegy.com">
+          <p>{isEnglish ? text.email[0] : text.email[1]}</p>
+        </a>
+        <a href="https://maps.app.goo.gl/nA3g4cSpErEjqDx79" target="_blank">
+          <p>{isEnglish ? text.adress[0] : text.adress[1]}</p>
+        </a>
       </div>
     </div>
   );
