@@ -26,3 +26,12 @@ beg : #cfaf5c */
 .footer .footer_contents i:hover {
   color: #cfaf5c;
 }
+
+@media only screen and (max-width: 850px) {
+  .footer .footer_contents i:hover {
+    color: white;
+  }
+  .footer .footer_contents i:active {
+    color: #cfaf5c;
+  }
+}
