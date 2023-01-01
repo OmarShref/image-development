@@ -6,6 +6,7 @@ import OurProjects from "./components/our-projects/OurProjects";
 import ContactUs from "./components/contact-us/ContactUs";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const { isEnglish } = useSelector((state) => state.language);
@@ -21,6 +22,7 @@ function App() {
       <AboutCompany />
       <OurProjects />
       <ContactUs />
+      <Footer />
     </div>
   );
 }

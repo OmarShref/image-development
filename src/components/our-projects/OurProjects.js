@@ -4,6 +4,7 @@ import { setCurrentIndex } from "../../redux/projectsReducer";
 
 const OurProjects = () => {
   const { projects, currentIndex } = useSelector((state) => state.projects);
+  const { isEnglish } = useSelector((state) => state.language);
   const dispatch = useDispatch();
 
   const handleMovingRight = () => {
@@ -49,7 +50,7 @@ const OurProjects = () => {
             style={{ backgroundImage: `url(${project.image})` }}
           >
             <div className="project-card">
-              <p>{project.name}</p>
+              <p>{isEnglish ? project.name[0] : project.name[1]}</p>
             </div>
           </div>
         ))}

@@ -7,12 +7,30 @@ import project5 from "../assets/project-5.jpeg";
 import project6 from "../assets/project-6.jpeg";
 const initialState = {
   projects: [
-    { name: "جنة مصر بالشيخ زايد", image: aboutCompany1 },
-    { name: "الإسكان الإجتماعي بالشيخ زايد", image: project2 },
-    { name: "صواري بالإسكندرية", image: project3 },
-    { name: "مجمع الصناعات بالعاشر من رمضان", image: project4 },
-    { name: "مدارس النيل بالشيخ زايد", image: project5 },
-    { name: "مركز شباب السادات", image: project6 },
+    {
+      name: ["Jannet masr ElSheikh Zayed", "جنة مصر بالشيخ زايد"],
+      image: aboutCompany1,
+    },
+    {
+      name: [
+        "AlEskan ALEgtmaey ElSheikh Zayed",
+        "الإسكان الإجتماعي بالشيخ زايد",
+      ],
+      image: project2,
+    },
+    { name: ["Swary Alex", "صواري بالإسكندرية"], image: project3 },
+    {
+      name: [
+        "Mogamaa AlSenaat ElSheikh Zayed",
+        "مجمع الصناعات بالعاشر من رمضان",
+      ],
+      image: project4,
+    },
+    {
+      name: ["Alnil Schools ElSheikh Zayed", "مدارس النيل بالشيخ زايد"],
+      image: project5,
+    },
+    { name: ["Youth Center AlSadat", "مركز شباب السادات"], image: project6 },
   ],
   currentIndex: 0,
 };

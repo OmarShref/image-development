@@ -40,7 +40,7 @@ beg : #cfaf5c */
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  direction: rtl;
+  direction: var(--text-direction);
   border-radius: 10px;
   padding: 20px 30px;
   background-color: rgba(250, 250, 250, 0.5);
@@ -52,7 +52,7 @@ beg : #cfaf5c */
   color: #23326b;
   font-size: 24px;
   font-weight: 600;
-  width: 50%;
+  min-width: 50%;
   padding: 25px 0;
 }
 
