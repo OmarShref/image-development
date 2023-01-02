@@ -1,4 +1,5 @@
 import "./OurProjects.css";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setCurrentIndex } from "../../redux/projectsReducer";
 
@@ -31,6 +32,12 @@ const OurProjects = () => {
     ).style.left = `calc(-100vw * ${currentIndex})`;
   }
   window.addEventListener("resize", resizeListener);
+
+  useEffect(() => {
+    document.getElementById("projects-container").style.width = `${
+      projects.length * 100
+    }vw`;
+  }, [projects]);
 
   return (
     <div id="our-projects" className="our-projects">
