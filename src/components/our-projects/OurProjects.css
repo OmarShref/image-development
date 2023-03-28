@@ -58,9 +58,26 @@ beg : #cfaf5c */
   position: absolute;
   bottom: 80px;
   left: 50%;
-  transform: translateX(-50%);
+  cursor: pointer;
   animation: project-card-animation 2s ease 0s infinite alternate;
+  -webkit-animation: project-card-animation 2s ease 0s infinite alternate;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
+.project .project-card p {
+  transition: 0.2s ease;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+}
+.project .project-card:hover p {
+  color: #cfaf5c;
+}
+
 @keyframes project-card-animation {
   from {
     bottom: 80px;

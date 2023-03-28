@@ -57,6 +57,14 @@ beg : #cfaf5c */
   font-size: 24px;
   font-weight: 600;
   padding: 25px 0;
+  transition: 0.2s ease;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+}
+.contactus .contents p:hover {
+  color: #cfaf5c;
 }
 
 @media only screen and (max-width: 650px) {
