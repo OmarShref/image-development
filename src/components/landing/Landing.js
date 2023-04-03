@@ -33,6 +33,7 @@ const Landing = () => {
         autoPlay
         muted
         loop
+        playsInline
         className="landing-background-video"
       ></video>
       <div className="landing-card">
