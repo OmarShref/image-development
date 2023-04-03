@@ -5,8 +5,14 @@ import project3 from "../assets/project-3.jpeg";
 import project4 from "../assets/project-4.jpeg";
 import project5 from "../assets/project-5.jpeg";
 import project6 from "../assets/project-6.jpeg";
+import octoperMall from "../assets/octoper-mall.jpg";
+
 const initialState = {
   projects: [
+    {
+      name: ["Image Mall", "مول إيميج"],
+      image: octoperMall,
+    },
     {
       name: ["Jannet masr ElSheikh Zayed", "جنة مصر بالشيخ زايد"],
       image: aboutCompany1,

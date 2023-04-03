@@ -1,5 +1,5 @@
 import "./Landing.css";
-import landingVideo from "../../assets/landing-video.mp4";
+import landingVideo from "../../assets/octoper-mall-video.mp4";
 import logo from "../../assets/logo.png";
 import { useSelector } from "react-redux";
 
